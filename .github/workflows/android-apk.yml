@@ -14,7 +14,7 @@ on:
 
 jobs:
   apk:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
@@ -23,15 +23,21 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: 17
-      - uses: android-actions/setup-android@v3
+      # Le SDK Android est préinstallé sur les machines Ubuntu de GitHub.
+      - name: Configurer le SDK Android
+        run: |
+          echo "ANDROID_HOME=$ANDROID_SDK_ROOT" >> "$GITHUB_ENV"
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > /tmp/local.properties
       - run: pnpm install --frozen-lockfile
       - name: Générer le projet Android
         working-directory: apps/mobile
-        run: npx expo prebuild --platform android --no-install
+        run: |
+          npx expo prebuild --platform android --no-install
+          cp /tmp/local.properties android/local.properties
       - name: Compiler l'APK
         working-directory: apps/mobile/android
         run: ./gradlew assembleRelease --no-daemon
