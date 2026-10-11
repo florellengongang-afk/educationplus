@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Se connecter</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5D45}a:hover{color:#07402F}
+button,input{font-family:inherit}
+input::placeholder{color:#6B7A73}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F5F2; color: #0F1F19; font-family: 'Figtree', sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 20px 24px 0">
+    <a href="ParentBienvenue.dc.html" aria-label="Retour" style="width: 44px; height: 44px; border-radius: 22px; border: 1px solid #DDE3DF; background: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #0F1F19">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+    </a>
+  </div>
+
+  <form style="flex: 1; padding: 28px 24px 0; display: flex; flex-direction: column; gap: 18px">
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 32px; font-weight: 700; letter-spacing: -0.5px">Bon retour</h1>
+      <span style="font-size: 16px; color: #4A5B54">Connectez-vous avec votre numéro de téléphone.</span>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="tel" style="font-size: 14px; font-weight: 700">Numéro de téléphone</label>
+      <div style="display: flex; gap: 8px">
+        <span style="height: 52px; box-sizing: border-box; padding: 0 12px; border: 1px solid #C9D3CE; border-radius: 12px; background: #FFFFFF; display: flex; align-items: center; font-size: 16px; font-weight: 600">+237</span>
+        <input id="tel" type="tel" placeholder="6XX XX XX XX" style="flex: 1; min-width: 0; height: 52px; box-sizing: border-box; border: 1px solid #C9D3CE; border-radius: 12px; padding: 0 14px; font-size: 16px; background: #FFFFFF; color: #0F1F19">
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="mdp" style="font-size: 14px; font-weight: 700">Mot de passe</label>
+      <div style="position: relative">
+        <input id="mdp" type="password" value="motdepasse" style="width: 100%; box-sizing: border-box; height: 52px; border: 1px solid #C9D3CE; border-radius: 12px; padding: 0 56px 0 14px; font-size: 16px; background: #FFFFFF; color: #0F1F19">
+        <button type="button" aria-label="Afficher le mot de passe" style="position: absolute; right: 4px; top: 4px; width: 44px; height: 44px; border: none; background: transparent; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4A5B54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"></path><circle cx="12" cy="12" r="3"></circle></svg></button>
+      </div>
+      <a href="ParentMdpOublie.dc.html" style="align-self: flex-end; min-height: 40px; display: flex; align-items: center; font-size: 14px; font-weight: 700">Mot de passe oublié ?</a>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 12px; color: #4A5B54; font-size: 13px">
+      <span style="flex: 1; height: 1px; background: #DDE3DF"></span>ou<span style="flex: 1; height: 1px; background: #DDE3DF"></span>
+    </div>
+    <a href="ParentOTP.dc.html" style="height: 52px; box-sizing: border-box; border-radius: 14px; border: 1px solid #0F1F19; color: #0F1F19; text-decoration: none; font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center">Recevoir un code par SMS</a>
+  </form>
+
+  <div style="padding: 14px 24px 28px; display: flex; flex-direction: column; gap: 10px">
+    <a href="Main.dc.html" style="height: 54px; border-radius: 14px; background: #0B5D45; color: #FFFFFF; text-decoration: none; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center">Se connecter</a>
+    <span style="font-size: 14px; color: #4A5B54; text-align: center">Pas encore de compte ? <a href="ParentConnexion.dc.html" style="font-weight: 700">Créer un compte</a></span>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

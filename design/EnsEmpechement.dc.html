@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Enseignant — Signaler un empêchement</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5D45}a:hover{color:#07402F}
+button,input,select,textarea{font-family:inherit}
+textarea::placeholder{color:#6B7A73}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F5F2; color: #0F1F19; font-family: 'Figtree', sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 20px 20px 14px; display: flex; align-items: center; gap: 12px">
+    <a href="EnsSeance.dc.html" aria-label="Retour" style="width: 44px; height: 44px; border-radius: 22px; border: 1px solid #DDE3DF; background: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #0F1F19">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+    </a>
+    <div style="display: flex; flex-direction: column">
+      <span style="font-size: 13px; color: #4A5B54">Physique-Chimie · 3e · aujourd'hui 16:00</span>
+      <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700">Signaler un empêchement</h1>
+    </div>
+  </div>
+
+  <form style="flex: 1; overflow: hidden; padding: 0 20px; display: flex; flex-direction: column; gap: 16px">
+    <fieldset style="margin: 0; padding: 0; border: none; display: flex; flex-direction: column; gap: 8px">
+      <legend style="font-size: 14px; font-weight: 700; padding-bottom: 8px">Que se passe-t-il ?</legend>
+      <label style="display: flex; align-items: flex-start; gap: 12px; background: #E3EFEA; border: 2px solid #0B5D45; border-radius: 14px; padding: 13px; cursor: pointer">
+        <input type="radio" name="t" checked style="width: 20px; height: 20px; margin: 1px 0 0; flex-shrink: 0; accent-color: #0B5D45"><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Je serai en retard</span><span style="font-size: 13px; color: #2E3E37">Le cours a bien lieu</span></span>
+      </label>
+      <label style="display: flex; align-items: flex-start; gap: 12px; background: #FFFFFF; border: 1px solid #C9D3CE; border-radius: 14px; padding: 14px; cursor: pointer">
+        <input type="radio" name="t" style="width: 20px; height: 20px; margin: 1px 0 0; flex-shrink: 0; accent-color: #0B5D45"><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Je ne peux pas venir</span><span style="font-size: 13px; color: #4A5B54">Proposer un autre créneau aux parents</span></span>
+      </label>
+    </fieldset>
+
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="retard" style="font-size: 14px; font-weight: 700">Retard estimé</label>
+      <select id="retard" style="height: 48px; border: 1px solid #C9D3CE; border-radius: 12px; padding: 0 12px; font-size: 15px; background: #FFFFFF; color: #0F1F19"><option>15 minutes</option><option>30 minutes</option><option>45 minutes</option></select>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="msg" style="font-size: 14px; font-weight: 700">Message aux parents</label>
+      <textarea id="msg" rows="3" placeholder="Ex. : embouteillages à Mvog-Mbi, j'arrive dès que possible" style="resize: none; border: 1px solid #C9D3CE; border-radius: 12px; padding: 10px 12px; font-size: 15px; background: #FFFFFF; color: #0F1F19"></textarea>
+    </div>
+
+    <div style="display: flex; gap: 10px; align-items: flex-start; background: #FCEFD9; border-radius: 14px; padding: 12px 14px">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B4210" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4M12 8h.01"></path></svg>
+      <span style="font-size: 13px; line-height: 1.4; color: #4A2E0B">Les 4 familles sont prévenues tout de suite. L'effet d'une absence de l'enseignant sur le cycle et le paiement reste <strong>à définir</strong>.</span>
+    </div>
+  </form>
+
+  <div style="padding: 12px 20px 24px; border-top: 1px solid #DDE3DF">
+    <a href="EnsSeance.dc.html" style="height: 54px; border-radius: 14px; background: #0F1F19; color: #FFFFFF; text-decoration: none; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center">Prévenir les parents</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

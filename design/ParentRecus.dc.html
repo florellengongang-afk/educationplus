@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Parent — Reçus</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5D45}a:hover{color:#07402F}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F5F2; color: #0F1F19; font-family: 'Figtree', sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 20px 20px 14px; display: flex; align-items: center; gap: 12px">
+    <a href="ParentPaiements.dc.html" aria-label="Retour" style="width: 44px; height: 44px; border-radius: 22px; border: 1px solid #DDE3DF; background: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #0F1F19">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+    </a>
+    <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 24px; font-weight: 700">Reçus</h1>
+  </div>
+
+  <div style="flex: 1; overflow: hidden; padding: 0 20px; display: flex; flex-direction: column; gap: 14px">
+    <section style="background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+      <div style="background: #0B5D45; color: #FFFFFF; padding: 16px 18px; display: flex; justify-content: space-between; align-items: center">
+        <span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 18px; font-weight: 700">Education<span style="color: #7FE0B4">Plus</span></span>
+        <span style="font-size: 12px; font-weight: 700; padding: 4px 8px; border-radius: 8px; background: #FFFFFF; color: #0B5D45">Payé · confirmé</span>
+      </div>
+      <div style="padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; font-size: 14px">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 2px; padding-bottom: 8px; border-bottom: 1px dashed #C9D3CE">
+          <span style="font-size: 13px; color: #4A5B54">Montant reçu</span>
+          <span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 32px; font-weight: 700">50 000 FCFA</span>
+        </div>
+        <div style="display: flex; justify-content: space-between"><span style="color: #4A5B54">Reçu n°</span><span style="font-weight: 600">[N° DE REÇU]</span></div>
+        <div style="display: flex; justify-content: space-between"><span style="color: #4A5B54">Date</span><span style="font-weight: 600">27 sept. 2026 · 18:42</span></div>
+        <div style="display: flex; justify-content: space-between"><span style="color: #4A5B54">Cours</span><span style="font-weight: 600">Maths · Kevin</span></div>
+        <div style="display: flex; justify-content: space-between"><span style="color: #4A5B54">Cycle</span><span style="font-weight: 600">29 août – 27 sept.</span></div>
+        <div style="display: flex; justify-content: space-between"><span style="color: #4A5B54">Mode</span><span style="font-weight: 600">Intégral (jour 30)</span></div>
+        <div style="display: flex; justify-content: space-between"><span style="color: #4A5B54">Solde du cycle</span><span style="font-weight: 700">0 FCFA</span></div>
+      </div>
+      <div style="padding: 0 18px 16px">
+        <button style="width: 100%; height: 46px; border-radius: 12px; border: 1px solid #0F1F19; background: #FFFFFF; color: #0F1F19; font-size: 15px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>Télécharger le PDF</button>
+      </div>
+    </section>
+
+    <section style="background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 18px; padding: 4px 16px; display: flex; flex-direction: column">
+      <a href="ParentRecus.dc.html" style="min-height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 8px; text-decoration: none; color: #0F1F19; border-bottom: 1px solid #EEF2EF">
+        <span style="display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 700">Maths · cycle d'août</span><span style="font-size: 13px; color: #4A5B54">2 versements · 28 août</span></span><span style="font-size: 15px; font-weight: 700">50 000</span></a>
+      <a href="ParentRecus.dc.html" style="min-height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 8px; text-decoration: none; color: #0F1F19">
+        <span style="display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 700">Maths · cycle de juillet</span><span style="font-size: 13px; color: #4A5B54">Paiements flexibles · 29 juil.</span></span><span style="font-size: 15px; font-weight: 700">50 000</span></a>
+    </section>
+  </div>
+  <div style="height: 20px"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

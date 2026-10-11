@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Code de vérification</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5D45}a:hover{color:#07402F}
+button,input{font-family:inherit}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F5F2; color: #0F1F19; font-family: 'Figtree', sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 20px 24px 0">
+    <a href="ParentLogin.dc.html" aria-label="Retour" style="width: 44px; height: 44px; border-radius: 22px; border: 1px solid #DDE3DF; background: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #0F1F19">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+    </a>
+  </div>
+
+  <form style="flex: 1; padding: 28px 24px 0; display: flex; flex-direction: column; gap: 24px">
+    <span style="width: 64px; height: 64px; border-radius: 20px; background: #E3EFEA; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0B5D45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M11 18h2"></path></svg></span>
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 30px; font-weight: 700; letter-spacing: -0.5px">Entrez le code reçu</h1>
+      <span style="font-size: 16px; color: #4A5B54; line-height: 1.4">Nous avons envoyé un code à 6 chiffres au <strong style="color: #0F1F19">+237 6XX XX XX 42</strong>.</span>
+    </div>
+
+    <fieldset style="margin: 0; padding: 0; border: none">
+      <legend style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Code de vérification</legend>
+      <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px">
+        <input aria-label="Chiffre 1" value="4" maxlength="1" style="height: 60px; min-width: 0; box-sizing: border-box; text-align: center; border: 2px solid #0B5D45; border-radius: 12px; font-size: 24px; font-weight: 700; background: #FFFFFF; color: #0F1F19">
+        <input aria-label="Chiffre 2" value="8" maxlength="1" style="height: 60px; min-width: 0; box-sizing: border-box; text-align: center; border: 2px solid #0B5D45; border-radius: 12px; font-size: 24px; font-weight: 700; background: #FFFFFF; color: #0F1F19">
+        <input aria-label="Chiffre 3" value="1" maxlength="1" style="height: 60px; min-width: 0; box-sizing: border-box; text-align: center; border: 2px solid #0B5D45; border-radius: 12px; font-size: 24px; font-weight: 700; background: #FFFFFF; color: #0F1F19">
+        <input aria-label="Chiffre 4" value="7" maxlength="1" style="height: 60px; min-width: 0; box-sizing: border-box; text-align: center; border: 2px solid #0B5D45; border-radius: 12px; font-size: 24px; font-weight: 700; background: #FFFFFF; color: #0F1F19">
+        <input aria-label="Chiffre 5" maxlength="1" style="height: 60px; min-width: 0; box-sizing: border-box; text-align: center; border: 2px solid #0F1F19; border-radius: 12px; font-size: 24px; font-weight: 700; background: #FFFFFF; color: #0F1F19">
+        <input aria-label="Chiffre 6" maxlength="1" style="height: 60px; min-width: 0; box-sizing: border-box; text-align: center; border: 1px solid #C9D3CE; border-radius: 12px; font-size: 24px; font-weight: 700; background: #FFFFFF; color: #0F1F19">
+      </div>
+    </fieldset>
+
+    <div style="display: flex; flex-direction: column; gap: 4px; align-items: center">
+      <span style="font-size: 14px; color: #4A5B54">Vous n'avez rien reçu ?</span>
+      <button type="button" disabled style="min-height: 44px; border: none; background: transparent; color: #4A5B54; font-size: 15px; font-weight: 700">Renvoyer le code dans 0:45</button>
+    </div>
+  </form>
+
+  <div style="padding: 14px 24px 28px; display: flex; flex-direction: column; gap: 10px">
+    <a href="Main.dc.html" style="height: 54px; border-radius: 14px; background: #0B5D45; color: #FFFFFF; text-decoration: none; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center">Vérifier</a>
+    <a href="ParentLogin.dc.html" style="min-height: 44px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700">Changer de numéro</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

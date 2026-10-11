@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Enseignant — Revenus et paiements</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5D45}a:hover{color:#07402F}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F5F2; color: #0F1F19; font-family: 'Figtree', sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <div style="flex: 1; overflow: hidden; padding: 24px 20px 0; display: flex; flex-direction: column; gap: 14px">
+    <div style="display: flex; align-items: center; justify-content: space-between">
+      <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 28px; font-weight: 700; letter-spacing: -0.5px">Revenus</h1>
+      <a href="EnsHistorique.dc.html" style="font-size: 14px; font-weight: 700; min-height: 44px; display: flex; align-items: center">Historique des cours</a>
+    </div>
+
+    <section style="background: #0F1F19; color: #FFFFFF; border-radius: 20px; padding: 18px; display: flex; flex-direction: column; gap: 14px">
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+        <div style="display: flex; flex-direction: column; gap: 2px">
+          <span style="font-size: 13px; color: #C4D0CA">Reste à verser</span>
+          <span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 28px; font-weight: 700">40 000</span>
+          <span style="font-size: 12px; color: #C4D0CA">FCFA</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 2px">
+          <span style="font-size: 13px; color: #C4D0CA">Payé en octobre</span>
+          <span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 28px; font-weight: 700">32 000</span>
+          <span style="font-size: 12px; color: #C4D0CA">FCFA · confirmé</span>
+        </div>
+      </div>
+      <span style="font-size: 12px; color: #C4D0CA">Indépendant : paiements supervisés par l'administration.</span>
+    </section>
+
+    <section style="background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 18px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; font-size: 14px">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 4px">
+        <span style="font-size: 15px; font-weight: 700">Cycle 28 sept. – 27 oct.</span>
+        <span style="font-size: 12px; font-weight: 700; padding: 3px 8px; border-radius: 8px; background: #FCEFD9; color: #6B4210">En attente de validation</span>
+      </div>
+      <div style="display: flex; justify-content: space-between"><span style="color: #4A5B54">Prix des cours</span><span>50 000 FCFA</span></div>
+      <div style="display: flex; justify-content: space-between"><span style="color: #4A5B54">Commission EducationPlus (20 %)</span><span>− 10 000</span></div>
+      <div style="display: flex; justify-content: space-between"><span style="color: #4A5B54">Frais prestataire</span><span>[À DÉFINIR]</span></div>
+      <div style="height: 1px; background: #DDE3DF; margin: 2px 0"></div>
+      <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 15px"><span>Net estimé</span><span>40 000 FCFA</span></div>
+    </section>
+
+    <section style="background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 18px; padding: 4px 16px; display: flex; flex-direction: column">
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 12px 0; border-bottom: 1px solid #EEF2EF">
+        <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Maths · 1re C</span><span style="font-size: 13px; color: #4A5B54">Cycle sept. · 32 000 FCFA</span></div>
+        <span style="font-size: 12px; font-weight: 700; padding: 3px 8px; border-radius: 8px; background: #E3EFEA; color: #07402F">Payé</span>
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 12px 0; border-bottom: 1px solid #EEF2EF">
+        <div style="display: flex; flex-direction: column; gap: 2px"><a href="EnsPaiementDetail.dc.html" style="font-size: 15px; font-weight: 700">Maths · 4e — détail</a><span style="font-size: 13px; color: #4A5B54">Cycle sept. · 24 000 FCFA</span></div>
+        <span style="font-size: 12px; font-weight: 700; padding: 3px 8px; border-radius: 8px; background: #DCE6F2; color: #1D3A5C">En cours de paiement</span>
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 12px 0">
+        <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Physique · Tle D</span><span style="font-size: 13px; color: #4A5B54">Réclamation parent ouverte</span></div>
+        <span style="font-size: 12px; font-weight: 700; padding: 3px 8px; border-radius: 8px; background: #F8E4E1; color: #7A221C">Bloqué · litige</span>
+      </div>
+    </section>
+  </div>
+
+  <nav style="background: #FFFFFF; border-top: 1px solid #DDE3DF; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); padding: 8px 4px 20px; margin-top: 12px">
+    <a href="EnsAccueil.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 6px 0; text-decoration: none; color: #4A5B54; font-size: 12px; font-weight: 600">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V21H3z"></path><path d="M9 21v-6h6v6"></path></svg>Accueil</a>
+    <a href="EnsDemandes.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 6px 0; text-decoration: none; color: #4A5B54; font-size: 12px; font-weight: 600">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>Demandes</a>
+    <a href="EnsCalendrier.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 6px 0; text-decoration: none; color: #4A5B54; font-size: 12px; font-weight: 600">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="M3 9h18M8 2v4M16 2v4"></path></svg>Calendrier</a>
+    <a href="EnsRevenus.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 6px 0; text-decoration: none; color: #0B5D45; font-size: 12px; font-weight: 700">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path></svg>Revenus</a>
+    <a href="EnsProfil.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 6px 0; text-decoration: none; color: #4A5B54; font-size: 12px; font-weight: 600">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>Profil</a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

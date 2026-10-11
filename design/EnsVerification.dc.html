@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Enseignant — Vérification du profil</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5D45}a:hover{color:#07402F}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F5F2; color: #0F1F19; font-family: 'Figtree', sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 20px 20px 14px; display: flex; align-items: center; gap: 12px">
+    <a href="EnsProfil.dc.html" aria-label="Retour" style="width: 44px; height: 44px; border-radius: 22px; border: 1px solid #DDE3DF; background: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #0F1F19">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+    </a>
+    <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700">Vérification du profil</h1>
+  </div>
+
+  <div style="flex: 1; overflow: hidden; padding: 0 20px; display: flex; flex-direction: column; gap: 14px">
+    <section style="background: #0F1F19; color: #FFFFFF; border-radius: 20px; padding: 18px; display: flex; flex-direction: column; gap: 12px">
+      <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: #C4D0CA">Statut</span>
+      <span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700">Profil en cours de vérification</span>
+      <div style="display: flex; align-items: center; gap: 10px">
+        <div style="flex: 1; height: 6px; border-radius: 3px; background: #2D4038; overflow: hidden"><div style="width: 60%; height: 6px; background: #7FE0B4"></div></div>
+        <span style="font-size: 13px; font-weight: 700">3 / 5</span>
+      </div>
+    </section>
+
+    <section style="background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 18px; padding: 4px 16px; display: flex; flex-direction: column">
+      <div style="min-height: 56px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid #EEF2EF">
+        <span style="width: 28px; height: 28px; border-radius: 14px; background: #0B5D45; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>
+        <span style="flex: 1; font-size: 15px; font-weight: 600">Numéro de téléphone vérifié</span>
+      </div>
+      <div style="min-height: 56px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid #EEF2EF">
+        <span style="width: 28px; height: 28px; border-radius: 14px; background: #0B5D45; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>
+        <span style="flex: 1; font-size: 15px; font-weight: 600">Matières, niveaux, tarif et disponibilités</span>
+      </div>
+      <div style="min-height: 56px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid #EEF2EF">
+        <span style="width: 28px; height: 28px; border-radius: 14px; background: #0B5D45; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>
+        <span style="flex: 1; font-size: 15px; font-weight: 600">CV ajouté</span>
+      </div>
+      <div style="min-height: 64px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid #EEF2EF">
+        <span style="width: 28px; height: 28px; box-sizing: border-box; border-radius: 14px; border: 2px dashed #8A9A93"></span>
+        <span style="flex: 1; display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 600">Pièce d'identité</span><span style="font-size: 13px; color: #4A5B54">À fournir</span></span>
+        <button style="height: 40px; padding: 0 12px; border-radius: 12px; border: 1px solid #0F1F19; background: #FFFFFF; color: #0F1F19; font-size: 14px; font-weight: 700; cursor: pointer">Ajouter</button>
+      </div>
+      <div style="min-height: 64px; display: flex; align-items: center; gap: 12px">
+        <span style="width: 28px; height: 28px; border-radius: 14px; background: #FCEFD9; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B4210" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l2 2"></path></svg></span>
+        <span style="flex: 1; display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 600">Diplômes</span><span style="font-size: 13px; color: #4A5B54">Déclarés · vérification en attente</span></span>
+      </div>
+    </section>
+
+    <div style="display: flex; gap: 10px; align-items: flex-start; background: #FCEFD9; border-radius: 14px; padding: 12px 14px">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B4210" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4M12 8h.01"></path></svg>
+      <span style="font-size: 13px; line-height: 1.4; color: #4A2E0B">Tant qu'ils ne sont pas vérifiés, vos diplômes apparaissent comme « déclarés » aux parents. La procédure de vérification et les conditions d'activation du profil restent <strong>à définir</strong>.</span>
+    </div>
+  </div>
+
+  <div style="padding: 12px 20px 24px; border-top: 1px solid #DDE3DF">
+    <a href="EnsAccueil.dc.html" style="height: 54px; border-radius: 14px; background: #0B5D45; color: #FFFFFF; text-decoration: none; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center">Aller à l'accueil</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

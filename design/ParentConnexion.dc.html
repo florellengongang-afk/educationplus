@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Inscription et connexion</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5D45}a:hover{color:#07402F}
+button,input{font-family:inherit}
+input::placeholder{color:#6B7A73}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F5F2; color: #0F1F19; font-family: 'Figtree', sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <div style="background: #0B5D45; color: #FFFFFF; padding: 40px 24px 28px; display: flex; flex-direction: column; gap: 8px">
+    <span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 32px; font-weight: 700; letter-spacing: -0.5px">Education<span style="color: #7FE0B4">Plus</span></span>
+    <span style="font-size: 16px; color: #E6F2EC; line-height: 1.4">Trouvez un enseignant et suivez chaque cours de votre enfant, même à distance.</span>
+  </div>
+
+  <form style="flex: 1; overflow: hidden; padding: 20px 24px 0; display: flex; flex-direction: column; gap: 14px">
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; background: #E3EAE6; padding: 4px; border-radius: 14px">
+      <button type="button" style="height: 42px; border: none; border-radius: 11px; background: transparent; color: #0F1F19; font-size: 15px; font-weight: 600; cursor: pointer">Se connecter</button>
+      <button type="button" style="height: 42px; border: none; border-radius: 11px; background: #FFFFFF; color: #0F1F19; font-size: 15px; font-weight: 700; cursor: pointer; box-shadow: 0 1px 2px rgba(15,31,25,0.12)">Créer un compte</button>
+    </div>
+
+    <fieldset style="margin: 0; padding: 0; border: none; display: flex; flex-direction: column; gap: 8px">
+      <legend style="font-size: 14px; font-weight: 700; padding: 0 0 8px">Je suis</legend>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+        <button type="button" aria-pressed="true" style="height: 46px; border-radius: 12px; border: 2px solid #0B5D45; background: #E3EFEA; color: #07402F; font-size: 14px; font-weight: 700; cursor: pointer">Parent</button>
+        <button type="button" aria-pressed="false" style="height: 46px; border-radius: 12px; border: 1px solid #C9D3CE; background: #FFFFFF; color: #0F1F19; font-size: 14px; font-weight: 600; cursor: pointer">Enseignant</button>
+        <button type="button" aria-pressed="false" style="height: 46px; border-radius: 12px; border: 1px solid #C9D3CE; background: #FFFFFF; color: #0F1F19; font-size: 14px; font-weight: 600; cursor: pointer">Partenaire</button>
+      </div>
+    </fieldset>
+
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="nom" style="font-size: 14px; font-weight: 700">Nom complet</label>
+      <input id="nom" placeholder="Ex. : Florence Ngo" style="height: 48px; border: 1px solid #C9D3CE; border-radius: 12px; padding: 0 14px; font-size: 16px; background: #FFFFFF; color: #0F1F19">
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="tel" style="font-size: 14px; font-weight: 700">Numéro de téléphone</label>
+      <div style="display: flex; gap: 8px">
+        <span style="height: 48px; padding: 0 12px; border: 1px solid #C9D3CE; border-radius: 12px; background: #FFFFFF; display: flex; align-items: center; font-size: 16px; font-weight: 600">+237</span>
+        <input id="tel" type="tel" placeholder="6XX XX XX XX" style="flex: 1; min-width: 0; height: 48px; border: 1px solid #C9D3CE; border-radius: 12px; padding: 0 14px; font-size: 16px; background: #FFFFFF; color: #0F1F19">
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="mdp" style="font-size: 14px; font-weight: 700">Mot de passe</label>
+      <input id="mdp" type="password" placeholder="8 caractères minimum" style="height: 48px; border: 1px solid #C9D3CE; border-radius: 12px; padding: 0 14px; font-size: 16px; background: #FFFFFF; color: #0F1F19">
+    </div>
+    <label style="display: flex; gap: 10px; align-items: flex-start; font-size: 13px; line-height: 1.45; color: #2E3E37; cursor: pointer">
+      <input type="checkbox" style="width: 20px; height: 20px; margin: 0; flex-shrink: 0; accent-color: #0B5D45">J'accepte les <a href="ParentConnexion.dc.html">conditions d'utilisation</a> et la <a href="ParentConnexion.dc.html">politique de confidentialité</a>.
+    </label>
+  </form>
+
+  <div style="padding: 14px 24px 28px; display: flex; flex-direction: column; gap: 8px">
+    <a href="ParentAccueilVide.dc.html" style="height: 54px; border-radius: 14px; background: #0B5D45; color: #FFFFFF; text-decoration: none; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center">Créer mon compte</a>
+    <span style="font-size: 12px; color: #4A5B54; text-align: center">Un code de vérification vous sera envoyé par SMS.</span>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

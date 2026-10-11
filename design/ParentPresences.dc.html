@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Parent — Présences et comptes rendus</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5D45}a:hover{color:#07402F}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F5F2; color: #0F1F19; font-family: 'Figtree', sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 20px 20px 12px; display: flex; flex-direction: column; gap: 14px">
+    <div style="display: flex; align-items: center; gap: 12px">
+      <a href="ParentCompte.dc.html" aria-label="Retour" style="width: 44px; height: 44px; border-radius: 22px; border: 1px solid #DDE3DF; background: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #0F1F19">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+      </a>
+      <div style="display: flex; flex-direction: column">
+        <span style="font-size: 13px; color: #4A5B54">Kevin · cycle en cours</span>
+        <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700">Présences et comptes rendus</h1>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+      <div style="background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 14px; padding: 10px 12px; display: flex; flex-direction: column"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 24px; font-weight: 700; color: #0B5D45">4</span><span style="font-size: 12px; color: #4A5B54">Présent</span></div>
+      <div style="background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 14px; padding: 10px 12px; display: flex; flex-direction: column"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 24px; font-weight: 700; color: #6B4210">1</span><span style="font-size: 12px; color: #4A5B54">En retard</span></div>
+      <div style="background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 14px; padding: 10px 12px; display: flex; flex-direction: column"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 24px; font-weight: 700; color: #7A221C">0</span><span style="font-size: 12px; color: #4A5B54">Absent</span></div>
+    </div>
+    <span style="font-size: 12px; color: #4A5B54">Statuts déclarés par l'enseignant dans l'application.</span>
+  </div>
+
+  <div style="flex: 1; overflow: hidden; padding: 0 20px; display: flex; flex-direction: column; gap: 10px">
+    <a href="ParentSeance.dc.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 16px; padding: 14px; display: flex; flex-direction: column; gap: 6px">
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span style="font-size: 15px; font-weight: 700">Mer. 7 oct. · Maths</span><span style="font-size: 12px; font-weight: 700; padding: 3px 8px; border-radius: 8px; background: #E3EFEA; color: #07402F">Présent</span></div>
+      <span style="font-size: 13px; color: #4A5B54">16:01 → 18:00 · Thalès, calcul de longueurs</span>
+      <span style="font-size: 13px"><strong>Devoirs :</strong> ex. 12 à 15 p. 84</span>
+    </a>
+    <a href="ParentSeance.dc.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 16px; padding: 14px; display: flex; flex-direction: column; gap: 6px">
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span style="font-size: 15px; font-weight: 700">Sam. 3 oct. · Maths</span><span style="font-size: 12px; font-weight: 700; padding: 3px 8px; border-radius: 8px; background: #FCEFD9; color: #6B4210">En retard</span></div>
+      <span style="font-size: 13px; color: #4A5B54">09:04 → 11:00 · arrivé à 09:20 · équations</span>
+    </a>
+    <a href="ParentSeance.dc.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 16px; padding: 14px; display: flex; flex-direction: column; gap: 6px">
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span style="font-size: 15px; font-weight: 700">Mer. 30 sept. · Maths</span><span style="font-size: 12px; font-weight: 700; padding: 3px 8px; border-radius: 8px; background: #E3EFEA; color: #07402F">Présent</span></div>
+      <span style="font-size: 13px; color: #4A5B54">16:00 → 18:02 · fractions et puissances</span>
+      <div style="background: #F6F8F7; border-radius: 10px; padding: 8px 10px; font-size: 12px; line-height: 1.4; color: #2E3E37"><strong>Heure de fin corrigée</strong> : non enregistrée → 18:02 · motif donné par l'enseignant · validée par l'administration le 1er oct.</div>
+    </a>
+    <a href="ParentNouvelleReclamation.dc.html" style="min-height: 44px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700">Une information est incorrecte ? La signaler</a>
+  </div>
+  <div style="height: 16px"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

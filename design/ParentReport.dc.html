@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Parent — Reporter une séance</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5D45}a:hover{color:#07402F}
+button,input,textarea{font-family:inherit}
+textarea::placeholder{color:#6B7A73}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F5F2; color: #0F1F19; font-family: 'Figtree', sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 20px 20px 14px; display: flex; align-items: center; gap: 12px">
+    <a href="ParentReservation.dc.html" aria-label="Retour" style="width: 44px; height: 44px; border-radius: 22px; border: 1px solid #DDE3DF; background: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #0F1F19">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+    </a>
+    <div style="display: flex; flex-direction: column">
+      <span style="font-size: 13px; color: #4A5B54">Maths · Kevin · M. Etoga</span>
+      <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700">Reporter une séance</h1>
+    </div>
+  </div>
+
+  <form style="flex: 1; overflow: hidden; padding: 0 20px; display: flex; flex-direction: column; gap: 16px">
+    <fieldset style="margin: 0; padding: 0; border: none; display: flex; flex-direction: column; gap: 8px">
+      <legend style="font-size: 14px; font-weight: 700; padding-bottom: 8px">Séance à déplacer</legend>
+      <label style="display: flex; align-items: center; gap: 12px; background: #E3EFEA; border: 2px solid #0B5D45; border-radius: 14px; padding: 11px 13px; cursor: pointer">
+        <input type="radio" name="s" checked style="width: 20px; height: 20px; margin: 0; accent-color: #0B5D45"><span style="display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 700">Samedi 10 octobre</span><span style="font-size: 13px; color: #2E3E37">09:00 – 11:00</span></span>
+      </label>
+      <label style="display: flex; align-items: center; gap: 12px; background: #FFFFFF; border: 1px solid #C9D3CE; border-radius: 14px; padding: 12px 14px; cursor: pointer">
+        <input type="radio" name="s" style="width: 20px; height: 20px; margin: 0; accent-color: #0B5D45"><span style="display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 600">Mercredi 14 octobre</span><span style="font-size: 13px; color: #4A5B54">16:00 – 18:00</span></span>
+      </label>
+    </fieldset>
+
+    <fieldset style="margin: 0; padding: 0; border: none; display: flex; flex-direction: column; gap: 8px">
+      <legend style="font-size: 14px; font-weight: 700; padding-bottom: 8px">Nouveau créneau proposé</legend>
+      <span style="font-size: 13px; color: #4A5B54">Créneaux libres de l'enseignant dans ce cycle :</span>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+        <button type="button" aria-pressed="false" style="height: 56px; border-radius: 12px; border: 1px solid #C9D3CE; background: #FFFFFF; color: #0F1F19; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px"><span>Lun. 12 oct.</span><span style="font-size: 12px; color: #4A5B54">14:00 – 16:00</span></button>
+        <button type="button" aria-pressed="true" style="height: 56px; border-radius: 12px; border: 2px solid #0B5D45; background: #0B5D45; color: #FFFFFF; font-size: 14px; font-weight: 700; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px"><span>Mar. 13 oct.</span><span style="font-size: 12px; color: #CFE6DC">16:00 – 18:00</span></button>
+        <button type="button" aria-pressed="false" style="height: 56px; border-radius: 12px; border: 1px solid #C9D3CE; background: #FFFFFF; color: #0F1F19; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px"><span>Jeu. 15 oct.</span><span style="font-size: 12px; color: #4A5B54">14:00 – 16:00</span></button>
+        <button type="button" aria-pressed="false" style="height: 56px; border-radius: 12px; border: 1px solid #C9D3CE; background: #FFFFFF; color: #0F1F19; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px"><span>Ven. 16 oct.</span><span style="font-size: 12px; color: #4A5B54">16:00 – 18:00</span></button>
+      </div>
+    </fieldset>
+
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="motif" style="font-size: 14px; font-weight: 700">Motif</label>
+      <textarea id="motif" rows="2" placeholder="Ex. : sortie scolaire samedi" style="resize: none; border: 1px solid #C9D3CE; border-radius: 12px; padding: 10px 12px; font-size: 15px; background: #FFFFFF; color: #0F1F19"></textarea>
+    </div>
+
+    <div style="display: flex; gap: 10px; align-items: flex-start; background: #FCEFD9; border-radius: 14px; padding: 12px 14px">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B4210" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4M12 8h.01"></path></svg>
+      <span style="font-size: 13px; line-height: 1.4; color: #4A2E0B">L'enseignant doit accepter le nouveau créneau. Le délai minimum et le traitement des reports dans le cycle restent <strong>à confirmer</strong>.</span>
+    </div>
+  </form>
+
+  <div style="padding: 12px 20px 24px; border-top: 1px solid #DDE3DF">
+    <a href="ParentReservation.dc.html" style="height: 54px; border-radius: 14px; background: #0B5D45; color: #FFFFFF; text-decoration: none; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center">Envoyer la demande de report</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

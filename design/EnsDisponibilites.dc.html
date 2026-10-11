@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Enseignant — Tarifs et disponibilités</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5D45}a:hover{color:#07402F}
+button,input{font-family:inherit}
+input::placeholder{color:#6B7A73}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F5F2; color: #0F1F19; font-family: 'Figtree', sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 20px 20px 14px; display: flex; align-items: center; gap: 12px">
+    <a href="EnsProfil.dc.html" aria-label="Retour" style="width: 44px; height: 44px; border-radius: 22px; border: 1px solid #DDE3DF; background: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #0F1F19">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+    </a>
+    <div style="display: flex; flex-direction: column">
+      <span style="font-size: 13px; color: #4A5B54">Profil professionnel</span>
+      <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700">Tarifs et disponibilités</h1>
+    </div>
+  </div>
+
+  <div style="flex: 1; overflow: hidden; padding: 0 20px; display: flex; flex-direction: column; gap: 14px">
+    <section style="background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 18px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px">
+      <label for="tarif" style="font-size: 13px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: #4A5B54">Tarif proposé</label>
+      <div style="display: flex; align-items: center; gap: 8px">
+        <input id="tarif" placeholder="[MONTANT]" style="flex: 1; min-width: 0; height: 48px; border: 1px solid #C9D3CE; border-radius: 12px; padding: 0 12px; font-size: 18px; font-weight: 700; color: #0F1F19; background: #FFFFFF">
+        <span style="font-size: 15px; font-weight: 600; color: #4A5B54">FCFA / mois</span>
+      </div>
+      <span style="font-size: 12px; color: #4A5B54; line-height: 1.4">Qui fixe les tarifs (enseignant, partenaire ou EducationPlus) reste à confirmer. La commission de 20 % est indiquée à part dans vos revenus.</span>
+    </section>
+
+    <section style="background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 18px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px">
+      <h2 style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: #4A5B54">Format accepté</h2>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+        <button aria-pressed="true" style="height: 44px; border-radius: 12px; border: 1px solid #0B5D45; background: #0B5D45; color: #FFFFFF; font-size: 14px; font-weight: 700; cursor: pointer">À domicile</button>
+        <button aria-pressed="true" style="height: 44px; border-radius: 12px; border: 1px solid #0B5D45; background: #0B5D45; color: #FFFFFF; font-size: 14px; font-weight: 700; cursor: pointer">En centre</button>
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: center; font-size: 14px; padding-top: 2px">
+        <span style="color: #4A5B54">Zone d'intervention</span>
+        <span style="font-weight: 600">Bastos, Essos, Nlongkak</span>
+      </div>
+    </section>
+
+    <section style="background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 18px; padding: 14px 12px; display: flex; flex-direction: column; gap: 8px">
+      <h2 style="margin: 0 4px; font-size: 13px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: #4A5B54">Créneaux disponibles</h2>
+      <div style="display: grid; grid-template-columns: 64px repeat(7, minmax(0, 1fr)); gap: 4px; align-items: center">
+        <span></span>
+        <sc-for list="{{days}}" as="d" hint-placeholder-count="7">
+          <span style="text-align: center; font-size: 12px; font-weight: 700; color: #4A5B54">{{d}}</span>
+        </sc-for>
+      </div>
+      <sc-for list="{{rows}}" as="r" hint-placeholder-count="3">
+        <div style="display: grid; grid-template-columns: 64px repeat(7, minmax(0, 1fr)); gap: 4px; align-items: center">
+          <span style="font-size: 12px; font-weight: 600; line-height: 1.2">{{r.label}}<br><span style="color: #4A5B54; font-weight: 400">{{r.hours}}</span></span>
+          <sc-for list="{{r.cells}}" as="c" hint-placeholder-count="7">
+            <button aria-label="{{c.aria}}" aria-pressed="{{c.pressed}}" style="{{c.style}}"></button>
+          </sc-for>
+        </div>
+      </sc-for>
+      <div style="display: flex; gap: 14px; font-size: 12px; color: #4A5B54; padding: 4px 4px 0">
+        <span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; border-radius: 3px; background: #0B5D45"></span>Disponible</span>
+        <span style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; border-radius: 3px; background: #F2B544"></span>Cours confirmé</span>
+      </div>
+    </section>
+  </div>
+
+  <div style="padding: 14px 20px 24px; border-top: 1px solid #DDE3DF; display: flex; flex-direction: column; gap: 6px">
+    <button style="height: 52px; border-radius: 14px; border: none; background: #0B5D45; color: #FFFFFF; font-size: 16px; font-weight: 700; cursor: pointer">Enregistrer</button>
+    <span style="font-size: 12px; color: #4A5B54; text-align: center">Les créneaux déjà confirmés ne peuvent pas être réservés deux fois.</span>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const days = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
+    const full = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'];
+    const slots = [
+      { label: 'Matin', hours: '8h–12h', v: [0, 0, 1, 0, 0, 2, 0] },
+      { label: 'Après-midi', hours: '14h–16h', v: [1, 1, 2, 1, 1, 2, 0] },
+      { label: 'Soir', hours: '16h–19h', v: [2, 1, 2, 1, 2, 0, 0] }
+    ];
+    const base = 'height:40px;border-radius:8px;cursor:pointer;';
+    const look = [
+      'background:#FFFFFF;border:1px solid #C9D3CE',
+      'background:#0B5D45;border:1px solid #0B5D45',
+      'background:#F2B544;border:1px solid #C98B12'
+    ];
+    const word = ['indisponible', 'disponible', 'cours confirmé'];
+    const rows = slots.map((s) => ({
+      label: s.label,
+      hours: s.hours,
+      cells: s.v.map((x, i) => ({
+        style: base + look[x],
+        pressed: x > 0 ? 'true' : 'false',
+        aria: s.label + ' ' + full[i] + ' : ' + word[x]
+      }))
+    }));
+    return { days, rows };
+  }
+}
+</script>
+</body>
+</html>

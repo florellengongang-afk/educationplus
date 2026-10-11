@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Parent — Annuler ou changer d'enseignant</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5D45}a:hover{color:#07402F}
+button,input,select{font-family:inherit}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F5F2; color: #0F1F19; font-family: 'Figtree', sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 20px 20px 14px; display: flex; align-items: center; gap: 12px">
+    <a href="ParentReservation.dc.html" aria-label="Retour" style="width: 44px; height: 44px; border-radius: 22px; border: 1px solid #DDE3DF; background: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #0F1F19">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+    </a>
+    <div style="display: flex; flex-direction: column">
+      <span style="font-size: 13px; color: #4A5B54">Maths · Kevin · M. Etoga</span>
+      <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700">Modifier la réservation</h1>
+    </div>
+  </div>
+
+  <form style="flex: 1; overflow: hidden; padding: 0 20px; display: flex; flex-direction: column; gap: 16px">
+    <fieldset style="margin: 0; padding: 0; border: none; display: flex; flex-direction: column; gap: 8px">
+      <legend style="font-size: 14px; font-weight: 700; padding-bottom: 8px">Que souhaitez-vous faire ?</legend>
+      <label style="display: flex; align-items: flex-start; gap: 12px; background: #E3EFEA; border: 2px solid #0B5D45; border-radius: 14px; padding: 13px; cursor: pointer">
+        <input type="radio" name="a" checked style="width: 20px; height: 20px; margin: 1px 0 0; flex-shrink: 0; accent-color: #0B5D45"><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Changer d'enseignant</span><span style="font-size: 13px; color: #2E3E37; line-height: 1.4">Une nouvelle recherche est lancée ; les cours continuent jusqu'au choix du remplaçant.</span></span>
+      </label>
+      <label style="display: flex; align-items: flex-start; gap: 12px; background: #FFFFFF; border: 1px solid #C9D3CE; border-radius: 14px; padding: 14px; cursor: pointer">
+        <input type="radio" name="a" style="width: 20px; height: 20px; margin: 1px 0 0; flex-shrink: 0; accent-color: #A3322A"><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Arrêter les cours</span><span style="font-size: 13px; color: #4A5B54; line-height: 1.4">La réservation prend fin à la date choisie.</span></span>
+      </label>
+    </fieldset>
+
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="raison" style="font-size: 14px; font-weight: 700">Raison</label>
+      <select id="raison" style="height: 48px; border: 1px solid #C9D3CE; border-radius: 12px; padding: 0 12px; font-size: 15px; background: #FFFFFF; color: #0F1F19">
+        <option>Méthode qui ne convient pas à l'enfant</option>
+        <option>Horaires devenus incompatibles</option>
+        <option>Problème de ponctualité</option>
+        <option>Autre</option>
+      </select>
+    </div>
+
+    <section style="background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 16px; padding: 6px 16px; display: flex; flex-direction: column; font-size: 14px">
+      <div style="display: flex; justify-content: space-between; gap: 10px; padding: 10px 0; border-bottom: 1px solid #EEF2EF"><span style="color: #4A5B54">Séances restantes du cycle</span><span style="font-weight: 700">3</span></div>
+      <div style="display: flex; justify-content: space-between; gap: 10px; padding: 10px 0; border-bottom: 1px solid #EEF2EF"><span style="color: #4A5B54">Déjà payé</span><span style="font-weight: 700">0 FCFA</span></div>
+      <div style="display: flex; justify-content: space-between; gap: 10px; padding: 10px 0"><span style="color: #4A5B54">Montant dû / remboursement</span><span style="font-weight: 700">[RÈGLE À DÉFINIR]</span></div>
+    </section>
+
+    <span style="font-size: 13px; color: #4A5B54; line-height: 1.4">Un problème grave avec l'enseignant ? <a href="ParentNouvelleReclamation.dc.html" style="font-weight: 700">Signalez-le à l'administration</a>.</span>
+  </form>
+
+  <div style="padding: 12px 20px 24px; border-top: 1px solid #DDE3DF; display: flex; flex-direction: column; gap: 8px">
+    <a href="ParentDemandes.dc.html" style="height: 54px; border-radius: 14px; background: #0F1F19; color: #FFFFFF; text-decoration: none; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center">Lancer une nouvelle recherche</a>
+    <a href="ParentReservation.dc.html" style="min-height: 44px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700">Garder la réservation actuelle</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

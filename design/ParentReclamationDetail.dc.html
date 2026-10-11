@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Parent — Détail d'une réclamation</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5D45}a:hover{color:#07402F}
+button,input{font-family:inherit}
+input::placeholder{color:#6B7A73}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F5F2; color: #0F1F19; font-family: 'Figtree', sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 20px 20px 12px; display: flex; flex-direction: column; gap: 12px">
+    <div style="display: flex; align-items: center; gap: 12px">
+      <a href="ParentReclamations.dc.html" aria-label="Retour" style="width: 44px; height: 44px; border-radius: 22px; border: 1px solid #DDE3DF; background: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #0F1F19">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+      </a>
+      <div style="flex: 1; display: flex; flex-direction: column">
+        <span style="font-size: 13px; color: #4A5B54">R-0139 · ouverte le 6 oct.</span>
+        <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 20px; font-weight: 700; line-height: 1.2">Cours marqué terminé sans avoir eu lieu</h1>
+      </div>
+    </div>
+    <div style="background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 14px; padding: 10px 14px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; font-size: 13px">
+      <span style="display: flex; flex-direction: column"><span style="color: #4A5B54">Statut</span><span style="font-weight: 700; color: #6B4210">En cours</span></span>
+      <span style="display: flex; flex-direction: column"><span style="color: #4A5B54">Responsable</span><span style="font-weight: 700">Administration</span></span>
+      <span style="display: flex; flex-direction: column"><span style="color: #4A5B54">Séance</span><span style="font-weight: 700">Sam. 3 oct. · Physique</span></span>
+      <span style="display: flex; flex-direction: column"><span style="color: #4A5B54">Adressée à</span><span style="font-weight: 700">Partenaire + admin</span></span>
+    </div>
+  </div>
+
+  <div style="flex: 1; overflow: hidden; padding: 4px 20px 0; display: flex; flex-direction: column; gap: 10px">
+    <div style="align-self: flex-end; max-width: 82%; background: #0B5D45; color: #FFFFFF; border-radius: 16px 16px 4px 16px; padding: 10px 14px; display: flex; flex-direction: column; gap: 4px">
+      <span style="font-size: 14px; line-height: 1.4">Kevin est resté à la maison samedi, personne n'est venu. Pourtant l'application indique le cours comme terminé.</span>
+      <span style="font-size: 11px; color: #CFE6DC; align-self: flex-end">Vous · 6 oct. 20:40</span>
+    </div>
+    <div style="align-self: flex-start; max-width: 82%; background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 16px 16px 16px 4px; padding: 10px 14px; display: flex; flex-direction: column; gap: 4px">
+      <span style="font-size: 12px; font-weight: 700; color: #4A5B54">Partenaire · Réseau Savoir Plus</span>
+      <span style="font-size: 14px; line-height: 1.4">Nous avons contacté l'enseignant et transmis le dossier à l'administration.</span>
+      <span style="font-size: 11px; color: #4A5B54; align-self: flex-end">7 oct. 08:30</span>
+    </div>
+    <div style="align-self: center; font-size: 12px; color: #4A5B54; background: #E3EAE6; border-radius: 10px; padding: 6px 10px; text-align: center">Statut : Nouvelle → En cours · paiement de l'enseignant bloqué</div>
+    <div style="align-self: flex-start; max-width: 82%; background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 16px 16px 16px 4px; padding: 10px 14px; display: flex; flex-direction: column; gap: 4px">
+      <span style="font-size: 12px; font-weight: 700; color: #4A5B54">Administration EducationPlus</span>
+      <span style="font-size: 14px; line-height: 1.4">Merci. Nous vérifions l'historique de la séance. Réponse sous [DÉLAI À DÉFINIR].</span>
+      <span style="font-size: 11px; color: #4A5B54; align-self: flex-end">7 oct. 09:12</span>
+    </div>
+  </div>
+
+  <div style="padding: 12px 20px 24px; border-top: 1px solid #DDE3DF; display: flex; gap: 8px; align-items: center">
+    <button aria-label="Joindre un fichier" style="width: 48px; height: 48px; flex-shrink: 0; border-radius: 24px; border: 1px solid #C9D3CE; background: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F1F19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.4 11.1-9.2 9.2a6 6 0 0 1-8.5-8.5l9.2-9.2a4 4 0 0 1 5.7 5.7l-9.2 9.2a2 2 0 0 1-2.8-2.8l8.5-8.5"></path></svg></button>
+    <label for="msg" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Votre message</label>
+    <input id="msg" placeholder="Écrire un message…" style="flex: 1; min-width: 0; height: 48px; border: 1px solid #C9D3CE; border-radius: 24px; padding: 0 16px; font-size: 15px; background: #FFFFFF; color: #0F1F19">
+    <button aria-label="Envoyer" style="width: 48px; height: 48px; flex-shrink: 0; border-radius: 24px; border: none; background: #0F1F19; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"></path></svg></button>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

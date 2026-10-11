@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Enseignant — Notifications</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5D45}a:hover{color:#07402F}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F5F2; color: #0F1F19; font-family: 'Figtree', sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 20px 20px 12px; display: flex; align-items: center; gap: 12px">
+    <a href="EnsAccueil.dc.html" aria-label="Retour" style="width: 44px; height: 44px; border-radius: 22px; border: 1px solid #DDE3DF; background: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #0F1F19">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+    </a>
+    <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 24px; font-weight: 700">Notifications</h1>
+  </div>
+
+  <div style="flex: 1; overflow: hidden; padding: 0 20px; display: flex; flex-direction: column; gap: 8px">
+    <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: #4A5B54">À traiter</span>
+    <div style="background: #FFFFFF; border: 2px solid #D9822B; border-radius: 14px; padding: 12px 14px; display: flex; flex-direction: column; gap: 10px">
+      <div style="display: flex; gap: 12px; align-items: flex-start">
+        <span style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 18px; background: #FCEFD9; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B4210" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="M3 9h18M8 2v4M16 2v4"></path></svg></span>
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Demande de report · Kevin</span><span style="font-size: 13px; color: #4A5B54">Sam. 10 oct. 9h → Mar. 13 oct. 16h · « sortie scolaire »</span></div>
+      </div>
+      <div style="display: flex; gap: 8px">
+        <button style="flex: 1; height: 44px; border-radius: 12px; border: 1px solid #C9D3CE; background: #FFFFFF; color: #0F1F19; font-size: 14px; font-weight: 600; cursor: pointer">Refuser</button>
+        <button style="flex: 1; height: 44px; border-radius: 12px; border: none; background: #0B5D45; color: #FFFFFF; font-size: 14px; font-weight: 700; cursor: pointer">Accepter</button>
+      </div>
+    </div>
+
+    <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: #4A5B54; padding-top: 6px">Aujourd'hui</span>
+    <a href="EnsSeance.dc.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 14px; padding: 12px 14px; display: flex; gap: 12px; align-items: flex-start">
+      <span style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 18px; background: #0B5D45; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Cours dans 30 minutes</span><span style="font-size: 13px; color: #4A5B54">Physique-Chimie · 3e · Centre Essos</span></div>
+      <span style="font-size: 12px; color: #4A5B54">15:35</span>
+    </a>
+    <a href="EnsConditions.dc.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 14px; padding: 12px 14px; display: flex; gap: 12px; align-items: flex-start">
+      <span style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 18px; background: #E3EFEA; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B5D45" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Un parent vous a choisi</span><span style="font-size: 13px; color: #4A5B54">Confirmez les conditions du cours</span></div>
+      <span style="font-size: 12px; color: #4A5B54">13:10</span>
+    </a>
+    <a href="EnsDemandeDetail.dc.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 14px; padding: 12px 14px; display: flex; gap: 12px; align-items: flex-start">
+      <span style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 18px; background: #E3EFEA; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B5D45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg></span>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Nouvelle demande compatible</span><span style="font-size: 13px; color: #4A5B54">Mathématiques · 1re C · Nlongkak</span></div>
+      <span style="font-size: 12px; color: #4A5B54">11:02</span>
+    </a>
+
+    <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: #4A5B54; padding-top: 6px">Hier</span>
+    <a href="EnsPaiementDetail.dc.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 14px; padding: 12px 14px; display: flex; gap: 12px; align-items: flex-start">
+      <span style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 18px; background: #EEF2EF; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2E3E37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path></svg></span>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Paiement en cours</span><span style="font-size: 13px; color: #4A5B54">Maths · 4e · cycle de septembre</span></div>
+      <span style="font-size: 12px; color: #4A5B54">17:20</span>
+    </a>
+  </div>
+  <div style="height: 20px"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

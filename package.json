@@ -1,0 +1,33 @@
+{
+  "name": "educationplus",
+  "private": true,
+  "version": "0.1.0",
+  "description": "EducationPlus — plateforme de répétiteurs à domicile (Cameroun)",
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "dev:web": "pnpm --filter web dev",
+    "dev:mobile": "pnpm --filter mobile start",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "db:up": "bash scripts/db-local.sh start",
+    "db:down": "bash scripts/db-local.sh stop",
+    "db:migrate": "pnpm --filter @educationplus/db migrate",
+    "db:seed": "pnpm --filter @educationplus/db seed"
+  },
+  "devDependencies": {
+    "turbo": "2.11.7",
+    "typescript": "5.9.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "unrs-resolver"
+    ]
+  }
+}

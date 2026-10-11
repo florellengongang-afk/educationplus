@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Enseignant — Terminer et compte rendu</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5D45}a:hover{color:#07402F}
+button,textarea{font-family:inherit}
+textarea::placeholder{color:#6B7A73}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F5F2; color: #0F1F19; font-family: 'Figtree', sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 20px 20px 14px; display: flex; flex-direction: column; gap: 14px">
+    <div style="display: flex; align-items: center; gap: 12px">
+      <a href="EnsAppel.dc.html" aria-label="Retour" style="width: 44px; height: 44px; border-radius: 22px; border: 1px solid #DDE3DF; background: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #0F1F19">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+      </a>
+      <div style="display: flex; flex-direction: column">
+        <span style="font-size: 13px; color: #4A5B54">Physique-Chimie · 3e · 4 élèves</span>
+        <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700">Terminer la séance</h1>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px; background: #0B5D45; color: #FFFFFF; border-radius: 16px; padding: 14px 16px">
+      <span style="width: 10px; height: 10px; border-radius: 5px; background: #7FE0B4"></span>
+      <div style="flex: 1; display: flex; flex-direction: column">
+        <span style="font-size: 13px; color: #CFE6DC">Démarré à 16:02</span>
+        <span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700">1 h 58 min</span>
+      </div>
+      <span style="font-size: 13px; color: #CFE6DC">Fin prévue 18:00</span>
+    </div>
+  </div>
+
+  <form style="flex: 1; overflow: hidden; padding: 0 20px; display: flex; flex-direction: column; gap: 12px">
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="notions" style="font-size: 14px; font-weight: 700">Notions abordées</label>
+      <textarea id="notions" rows="2" style="resize: none; border: 1px solid #C9D3CE; border-radius: 12px; padding: 10px 12px; font-size: 15px; background: #FFFFFF; color: #0F1F19">Loi d'Ohm, montage en série et en dérivation.</textarea>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="exos" style="font-size: 14px; font-weight: 700">Exercices réalisés</label>
+      <textarea id="exos" rows="2" placeholder="Ex. : exercices 3 à 6, fiche n°2" style="resize: none; border: 1px solid #C9D3CE; border-radius: 12px; padding: 10px 12px; font-size: 15px; background: #FFFFFF; color: #0F1F19"></textarea>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="devoirs" style="font-size: 14px; font-weight: 700">Devoirs à faire</label>
+      <textarea id="devoirs" rows="2" placeholder="Visible par chaque parent" style="resize: none; border: 1px solid #C9D3CE; border-radius: 12px; padding: 10px 12px; font-size: 15px; background: #FFFFFF; color: #0F1F19"></textarea>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="reco" style="font-size: 14px; font-weight: 700">Difficultés et recommandations</label>
+      <textarea id="reco" rows="2" placeholder="Par élève si nécessaire" style="resize: none; border: 1px solid #C9D3CE; border-radius: 12px; padding: 10px 12px; font-size: 15px; background: #FFFFFF; color: #0F1F19"></textarea>
+    </div>
+    <label style="display: flex; align-items: center; gap: 12px; min-height: 44px; background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 12px; padding: 0 14px; font-size: 15px; font-weight: 600; cursor: pointer">
+      <input type="checkbox" style="width: 20px; height: 20px; accent-color: #A3322A">Signaler un incident pendant la séance
+    </label>
+  </form>
+
+  <div style="padding: 14px 20px 24px; display: flex; flex-direction: column; gap: 6px; border-top: 1px solid #DDE3DF">
+    <a href="EnsSuccesSeance.dc.html" style="height: 54px; border-radius: 14px; background: #0F1F19; color: #FFFFFF; text-decoration: none; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 10px"><svg width="14" height="14" viewBox="0 0 24 24" fill="#FFFFFF"><rect x="5" y="5" width="14" height="14" rx="2"></rect></svg>Terminer et envoyer</a>
+    <a href="EnsCorrection.dc.html" style="min-height: 44px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600">Oubli d'horaire ? Demander une correction motivée</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

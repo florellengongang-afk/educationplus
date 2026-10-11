@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Parent — Accueil sans enfant</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5D45}a:hover{color:#07402F}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F5F2; color: #0F1F19; font-family: 'Figtree', sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <div style="flex: 1; overflow: hidden; padding: 24px 20px 0; display: flex; flex-direction: column; gap: 18px">
+    <div style="display: flex; align-items: center; justify-content: space-between">
+      <div style="display: flex; flex-direction: column; gap: 2px">
+        <span style="font-size: 14px; color: #4A5B54">Compte créé</span>
+        <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 28px; font-weight: 700; letter-spacing: -0.5px">Bienvenue, Florence</h1>
+      </div>
+      <a href="ParentCompte.dc.html" aria-label="Mon compte" style="width: 44px; height: 44px; border-radius: 22px; background: #0B5D45; color: #FFFFFF; text-decoration: none; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px">FN</a>
+    </div>
+
+    <section style="background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 22px; padding: 24px 20px; display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center">
+      <svg width="132" height="96" viewBox="0 0 132 96" fill="none" aria-hidden="true">
+        <rect x="8" y="58" width="116" height="30" rx="15" fill="#E3EFEA"></rect>
+        <rect x="36" y="20" width="60" height="46" rx="6" fill="#0B5D45"></rect>
+        <path d="M66 24v38" stroke="#7FE0B4" stroke-width="3" stroke-linecap="round"></path>
+        <path d="M44 32h14M44 40h14M44 48h10M74 32h14M74 40h14M74 48h10" stroke="#CFE6DC" stroke-width="3" stroke-linecap="round"></path>
+        <circle cx="108" cy="22" r="10" fill="#F2B544"></circle>
+        <path d="M104 22l3 3 6-6" stroke="#0F1F19" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path>
+        <circle cx="22" cy="34" r="5" fill="#CFE6DC"></circle>
+      </svg>
+      <div style="display: flex; flex-direction: column; gap: 6px">
+        <h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700">Ajoutez votre premier enfant</h2>
+        <span style="font-size: 15px; color: #4A5B54; line-height: 1.45">Indiquez sa classe et les matières à renforcer. Vous pourrez ensuite chercher un enseignant adapté.</span>
+      </div>
+      <a href="ParentEnfants.dc.html" style="width: 100%; height: 54px; border-radius: 14px; background: #0B5D45; color: #FFFFFF; text-decoration: none; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>Ajouter un enfant</a>
+    </section>
+
+    <section style="display: flex; flex-direction: column; gap: 10px">
+      <h2 style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: #4A5B54">Comment ça marche</h2>
+      <div style="display: flex; align-items: center; gap: 12px; background: #FFFFFF; border: 2px solid #0B5D45; border-radius: 16px; padding: 12px 14px">
+        <span style="width: 32px; height: 32px; flex-shrink: 0; border-radius: 16px; background: #0B5D45; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 700">1</span>
+        <div style="display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 700">Ajoutez votre enfant</span><span style="font-size: 13px; color: #4A5B54">Classe et matières à renforcer</span></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 16px; padding: 13px 15px">
+        <span style="width: 32px; height: 32px; flex-shrink: 0; border-radius: 16px; background: #E3EAE6; color: #2E3E37; display: flex; align-items: center; justify-content: center; font-weight: 700">2</span>
+        <div style="display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 700; color: #2E3E37">Publiez une demande de cours</span><span style="font-size: 13px; color: #4A5B54">Jusqu'à 10 enseignants se proposent</span></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 16px; padding: 13px 15px">
+        <span style="width: 32px; height: 32px; flex-shrink: 0; border-radius: 16px; background: #E3EAE6; color: #2E3E37; display: flex; align-items: center; justify-content: center; font-weight: 700">3</span>
+        <div style="display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 700; color: #2E3E37">Suivez chaque séance</span><span style="font-size: 13px; color: #4A5B54">Appel, début, fin et compte rendu</span></div>
+      </div>
+    </section>
+  </div>
+
+  <nav style="background: #FFFFFF; border-top: 1px solid #DDE3DF; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 8px 8px 20px; margin-top: 12px">
+    <a href="ParentAccueilVide.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 6px 0; text-decoration: none; color: #0B5D45; font-size: 12px; font-weight: 700">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V21H3z"></path><path d="M9 21v-6h6v6"></path></svg>Accueil</a>
+    <a href="ParentCalendrier.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 6px 0; text-decoration: none; color: #4A5B54; font-size: 12px; font-weight: 600">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="M3 9h18M8 2v4M16 2v4"></path></svg>Calendrier</a>
+    <a href="ParentPaiements.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 6px 0; text-decoration: none; color: #4A5B54; font-size: 12px; font-weight: 600">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path></svg>Paiements</a>
+    <a href="ParentReclamations.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 6px 0; text-decoration: none; color: #4A5B54; font-size: 12px; font-weight: 600">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Réclamations</a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

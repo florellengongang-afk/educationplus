@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Réclamation envoyée</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5D45}a:hover{color:#07402F}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F5F2; color: #0F1F19; font-family: 'Figtree', sans-serif; display: flex; flex-direction: column; overflow: hidden; padding: 0 24px 28px">
+  <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; text-align: center">
+    <span style="width: 96px; height: 96px; border-radius: 48px; background: #E3EFEA; display: flex; align-items: center; justify-content: center">
+      <span style="width: 68px; height: 68px; border-radius: 34px; background: #0B5D45; display: flex; align-items: center; justify-content: center"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>
+    </span>
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 30px; font-weight: 700; letter-spacing: -0.5px">Réclamation envoyée</h1>
+      <span style="font-size: 16px; color: #4A5B54; line-height: 1.45">Elle a bien été transmise. Vous serez notifiée à chaque mise à jour.</span>
+    </div>
+    <section style="width: 100%; box-sizing: border-box; background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 18px; padding: 6px 16px; display: flex; flex-direction: column; font-size: 14px; text-align: left">
+      <div style="display: flex; justify-content: space-between; gap: 10px; padding: 10px 0; border-bottom: 1px solid #EEF2EF"><span style="color: #4A5B54">Numéro</span><span style="font-weight: 700">R-0143</span></div>
+      <div style="display: flex; justify-content: space-between; gap: 10px; padding: 10px 0; border-bottom: 1px solid #EEF2EF"><span style="color: #4A5B54">Type</span><span style="font-weight: 700">Présence incorrecte</span></div>
+      <div style="display: flex; justify-content: space-between; gap: 10px; padding: 10px 0; border-bottom: 1px solid #EEF2EF"><span style="color: #4A5B54">Transmise à</span><span style="font-weight: 700">Partenaire + administration</span></div>
+      <div style="display: flex; justify-content: space-between; gap: 10px; padding: 10px 0"><span style="color: #4A5B54">Délai de réponse</span><span style="font-weight: 700">[À DÉFINIR]</span></div>
+    </section>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 8px">
+    <a href="ParentReclamationDetail.dc.html" style="height: 54px; border-radius: 14px; background: #0F1F19; color: #FFFFFF; text-decoration: none; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center">Suivre ma réclamation</a>
+    <a href="Main.dc.html" style="min-height: 44px; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700">Retour à l'accueil</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

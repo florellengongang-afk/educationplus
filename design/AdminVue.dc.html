@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Admin — Vue globale</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5D45}a:hover{color:#07402F}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="min-height: 100vh; box-sizing: border-box; background: #F3F5F2; color: #0F1F19; font-family: 'Figtree', sans-serif; display: flex; flex-wrap: wrap; align-items: stretch">
+  <nav style="flex: 1 1 220px; max-width: 100%; background: #0F1F19; color: #FFFFFF; padding: 24px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 4px">
+    <span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700; padding: 0 12px 20px">Education<span style="color: #7FE0B4">Plus</span></span>
+    <a href="AdminVue.dc.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 10px; background: #1F3329; color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 15px">Vue globale</a>
+    <a href="AdminVue.dc.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 10px; color: #C4D0CA; text-decoration: none; font-size: 15px">Utilisateurs &amp; rôles</a>
+    <a href="AdminVue.dc.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 10px; color: #C4D0CA; text-decoration: none; font-size: 15px">Partenaires</a>
+    <a href="AdminVue.dc.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 10px; color: #C4D0CA; text-decoration: none; font-size: 15px">Demandes &amp; réservations</a>
+    <a href="AdminVue.dc.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 10px; color: #C4D0CA; text-decoration: none; font-size: 15px">Séances &amp; corrections</a>
+    <a href="AdminVue.dc.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 10px; color: #C4D0CA; text-decoration: none; font-size: 15px">Paiements &amp; commissions</a>
+    <a href="AdminVue.dc.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 10px; color: #C4D0CA; text-decoration: none; font-size: 15px">Réclamations &amp; litiges</a>
+    <a href="AdminVue.dc.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 10px; color: #C4D0CA; text-decoration: none; font-size: 15px">Journal d'audit</a>
+  </nav>
+
+  <main style="flex: 999 1 560px; min-width: 0; padding: 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px">
+      <div style="display: flex; flex-direction: column; gap: 4px">
+        <span style="font-size: 14px; color: #4A5B54">Vendredi 9 octobre · Cameroun</span>
+        <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 34px; font-weight: 700; letter-spacing: -0.5px">Vue globale</h1>
+      </div>
+      <span style="font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 10px; background: #E3EAE6; color: #4A5B54">Données d'exemple</span>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px">
+      <div style="background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 16px; padding: 18px; display: flex; flex-direction: column; gap: 6px">
+        <span style="font-size: 14px; color: #4A5B54">Séances aujourd'hui</span>
+        <span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 32px; font-weight: 700">48</span>
+        <span style="font-size: 13px; color: #4A5B54">31 terminées · 9 en cours · 8 à venir</span>
+      </div>
+      <div style="background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 16px; padding: 18px; display: flex; flex-direction: column; gap: 6px">
+        <span style="font-size: 14px; color: #4A5B54">Non démarrées à l'heure</span>
+        <span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 32px; font-weight: 700; color: #7A221C">3</span>
+        <span style="font-size: 13px; color: #4A5B54">plus de 15 min de retard</span>
+      </div>
+      <div style="background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 16px; padding: 18px; display: flex; flex-direction: column; gap: 6px">
+        <span style="font-size: 14px; color: #4A5B54">Réclamations ouvertes</span>
+        <span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 32px; font-weight: 700">7</span>
+        <span style="font-size: 13px; color: #4A5B54">dont 1 sécurité enfant</span>
+      </div>
+      <div style="background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 16px; padding: 18px; display: flex; flex-direction: column; gap: 6px">
+        <span style="font-size: 14px; color: #4A5B54">Paiements enseignants à valider</span>
+        <span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 32px; font-weight: 700">12</span>
+        <span style="font-size: 13px; color: #4A5B54">5 indépendants · 7 partenaires</span>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start">
+      <section style="flex: 2 1 480px; min-width: 0; background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+        <h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 20px; font-weight: 700">Réclamations prioritaires</h2>
+        <div style="overflow-x: auto">
+          <table style="width: 100%; min-width: 520px; border-collapse: collapse; font-size: 14px">
+            <thead>
+              <tr style="text-align: left; color: #4A5B54">
+                <th style="padding: 10px 8px; border-bottom: 1px solid #DDE3DF; font-weight: 600">N°</th>
+                <th style="padding: 10px 8px; border-bottom: 1px solid #DDE3DF; font-weight: 600">Catégorie</th>
+                <th style="padding: 10px 8px; border-bottom: 1px solid #DDE3DF; font-weight: 600">Adressée à</th>
+                <th style="padding: 10px 8px; border-bottom: 1px solid #DDE3DF; font-weight: 600">Statut</th>
+                <th style="padding: 10px 8px; border-bottom: 1px solid #DDE3DF"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 12px 8px; border-bottom: 1px solid #EEF2EF; font-weight: 600">R-0142</td>
+                <td style="padding: 12px 8px; border-bottom: 1px solid #EEF2EF"><span style="font-weight: 700; color: #7A221C">Sécurité de l'enfant</span></td>
+                <td style="padding: 12px 8px; border-bottom: 1px solid #EEF2EF">Administration</td>
+                <td style="padding: 12px 8px; border-bottom: 1px solid #EEF2EF"><span style="padding: 3px 8px; border-radius: 8px; background: #F8E4E1; color: #7A221C; font-weight: 600">Nouvelle</span></td>
+                <td style="padding: 12px 8px; border-bottom: 1px solid #EEF2EF; text-align: right"><a href="AdminVue.dc.html" style="font-weight: 600">Intervenir</a></td>
+              </tr>
+              <tr>
+                <td style="padding: 12px 8px; border-bottom: 1px solid #EEF2EF; font-weight: 600">R-0139</td>
+                <td style="padding: 12px 8px; border-bottom: 1px solid #EEF2EF">Cours marqué terminé non réalisé</td>
+                <td style="padding: 12px 8px; border-bottom: 1px solid #EEF2EF">Partenaire + Admin</td>
+                <td style="padding: 12px 8px; border-bottom: 1px solid #EEF2EF"><span style="padding: 3px 8px; border-radius: 8px; background: #FCEFD9; color: #6B4210; font-weight: 600">En cours</span></td>
+                <td style="padding: 12px 8px; border-bottom: 1px solid #EEF2EF; text-align: right"><a href="AdminVue.dc.html" style="font-weight: 600">Ouvrir</a></td>
+              </tr>
+              <tr>
+                <td style="padding: 12px 8px; font-weight: 600">R-0136</td>
+                <td style="padding: 12px 8px">Désaccord sur le paiement</td>
+                <td style="padding: 12px 8px">Administration</td>
+                <td style="padding: 12px 8px"><span style="padding: 3px 8px; border-radius: 8px; background: #E3EAE6; color: #2E3E37; font-weight: 600">Infos demandées</span></td>
+                <td style="padding: 12px 8px; text-align: right"><a href="AdminVue.dc.html" style="font-weight: 600">Ouvrir</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section style="flex: 1 1 280px; min-width: 0; background: #FCEFD9; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 10px">
+        <h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 20px; font-weight: 700; color: #4A2E0B">Décisions à confirmer</h2>
+        <span style="font-size: 14px; color: #4A2E0B">Règles non programmées tant qu'elles ne sont pas validées.</span>
+        <div style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: #4A2E0B">
+          <span style="background: #FFFFFF; border-radius: 10px; padding: 10px 12px">Base de calcul de la commission de 20 %</span>
+          <span style="background: #FFFFFF; border-radius: 10px; padding: 10px 12px">Rémunération éventuelle du partenaire</span>
+          <span style="background: #FFFFFF; border-radius: 10px; padding: 10px 12px">Règle des avances après le jour 20</span>
+          <span style="background: #FFFFFF; border-radius: 10px; padding: 10px 12px">Absences, annulations et remboursements</span>
+          <span style="background: #FFFFFF; border-radius: 10px; padding: 10px 12px">Prestataire de paiement au Cameroun</span>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

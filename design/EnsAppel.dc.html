@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Enseignant — Faire l'appel</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5D45}a:hover{color:#07402F}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F5F2; color: #0F1F19; font-family: 'Figtree', sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 20px 20px 14px; display: flex; flex-direction: column; gap: 14px">
+    <div style="display: flex; align-items: center; gap: 12px">
+      <a href="EnsSeance.dc.html" aria-label="Retour" style="width: 44px; height: 44px; border-radius: 22px; border: 1px solid #DDE3DF; background: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #0F1F19">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+      </a>
+      <div style="display: flex; flex-direction: column">
+        <span style="font-size: 13px; color: #4A5B54">Centre Essos · Salle 2 · 16:00 – 18:00</span>
+        <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700">Physique-Chimie · 3e</h1>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 14px; padding: 12px 14px">
+      <span style="font-size: 15px; font-weight: 700">Appel · {{marked}} / {{total}} élèves</span>
+      <span style="font-size: 13px; color: #4A5B54">{{summary}}</span>
+    </div>
+  </div>
+
+  <div style="flex: 1; overflow: auto; padding: 0 20px; display: flex; flex-direction: column; gap: 10px">
+    <sc-for list="{{students}}" as="s" hint-placeholder-count="4">
+      <div style="background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 10px">
+        <div style="display: flex; align-items: center; gap: 12px">
+          <div style="width: 40px; height: 40px; border-radius: 20px; background: #E3EAE6; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; color: #0B5D45">{{s.initials}}</div>
+          <div style="flex: 1; display: flex; flex-direction: column">
+            <span style="font-size: 16px; font-weight: 700">{{s.name}}</span>
+            <span style="font-size: 13px; color: #4A5B54">{{s.stamp}}</span>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px">
+          <sc-for list="{{s.opts}}" as="o" hint-placeholder-count="3">
+            <button onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="{{o.style}}">{{o.label}}</button>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="padding: 14px 20px 24px; display: flex; flex-direction: column; gap: 8px; border-top: 1px solid #DDE3DF; background: #F3F5F2">
+    <sc-if value="{{showWaiting}}" hint-placeholder-val="{{ true }}">
+      <button disabled style="height: 54px; border-radius: 14px; border: none; background: #DDE3DF; color: #4A5B54; font-size: 15px; font-weight: 700">Terminez l'appel pour démarrer</button>
+    </sc-if>
+    <sc-if value="{{showStart}}" hint-placeholder-val="{{ false }}">
+      <button onClick="{{start}}" style="height: 54px; border-radius: 14px; border: none; background: #0B5D45; color: #FFFFFF; font-size: 16px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px"><svg width="16" height="16" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M7 4v16l13-8z"></path></svg>Démarrer le cours</button>
+    </sc-if>
+    <sc-if value="{{started}}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <span style="font-size: 14px; text-align: center; color: #0B5D45; font-weight: 700">Cours démarré à {{startedAt}} · parents notifiés</span>
+        <a href="EnsCompteRendu.dc.html" style="height: 54px; border-radius: 14px; background: #0F1F19; color: #FFFFFF; text-decoration: none; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 10px"><svg width="14" height="14" viewBox="0 0 24 24" fill="#FFFFFF"><rect x="5" y="5" width="14" height="14" rx="2"></rect></svg>Terminer le cours</a>
+      </div>
+    </sc-if>
+    <span style="font-size: 12px; color: #4A5B54; text-align: center">Chaque parent ne voit que le statut de son enfant.</span>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = {
+      st: { k: { v: 'present', t: '15:58' }, a: { v: 'late', t: '16:01' } },
+      started: false,
+      startedAt: ''
+    };
+  }
+  now() {
+    const d = new Date();
+    return String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
+  }
+  renderVals() {
+    const list = [
+      { id: 'k', name: 'Kevin Ngo', initials: 'KN' },
+      { id: 'a', name: 'Aminatou Bello', initials: 'AB' },
+      { id: 'j', name: 'Junior Fotso', initials: 'JF' },
+      { id: 'm', name: 'Marie Ekambi', initials: 'ME' }
+    ];
+    const defs = [
+      { v: 'present', label: 'Présent', on: 'background:#0B5D45;color:#FFFFFF;border:1px solid #0B5D45' },
+      { v: 'late', label: 'Retard', on: 'background:#F2B544;color:#0F1F19;border:1px solid #C98B12' },
+      { v: 'absent', label: 'Absent', on: 'background:#A3322A;color:#FFFFFF;border:1px solid #A3322A' }
+    ];
+    const base = 'height:44px;border-radius:12px;font-size:14px;font-weight:700;cursor:pointer;';
+    const off = 'background:#FFFFFF;color:#0F1F19;border:1px solid #C9D3CE';
+    const st = this.state.st;
+    const locked = this.state.started;
+    const students = list.map((s) => {
+      const cur = st[s.id];
+      return {
+        ...s,
+        stamp: cur ? 'Enregistré à ' + cur.t : 'Non marqué',
+        opts: defs.map((d) => ({
+          label: d.label,
+          pressed: cur && cur.v === d.v ? 'true' : 'false',
+          style: base + (cur && cur.v === d.v ? d.on : off),
+          pick: () => {
+            if (locked) return;
+            this.setState({ st: { ...this.state.st, [s.id]: { v: d.v, t: this.now() } } });
+          }
+        }))
+      };
+    });
+    const vals = Object.values(st);
+    const marked = vals.length;
+    const count = (v) => vals.filter((x) => x.v === v).length;
+    const all = marked === list.length;
+    return {
+      students,
+      marked,
+      total: list.length,
+      summary: count('present') + ' présents · ' + count('late') + ' retard · ' + count('absent') + ' absent',
+      showWaiting: !all && !this.state.started,
+      showStart: all && !this.state.started,
+      started: this.state.started,
+      startedAt: this.state.startedAt,
+      start: () => this.setState({ started: true, startedAt: this.now() })
+    };
+  }
+}
+</script>
+</body>
+</html>

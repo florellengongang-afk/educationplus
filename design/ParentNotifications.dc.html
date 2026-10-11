@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Parent — Notifications</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5D45}a:hover{color:#07402F}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F5F2; color: #0F1F19; font-family: 'Figtree', sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 20px 20px 10px; display: flex; flex-direction: column; gap: 10px">
+    <div style="display: flex; align-items: center; gap: 12px">
+      <a href="Main.dc.html" aria-label="Retour" style="width: 44px; height: 44px; border-radius: 22px; border: 1px solid #DDE3DF; background: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #0F1F19">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+      </a>
+      <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 24px; font-weight: 700">Notifications</h1>
+    </div>
+    <span style="font-size: 13px; color: #4A5B54; line-height: 1.4">Tout est conservé ici, même si une alerte n'est pas arrivée sur votre téléphone.</span>
+  </div>
+
+  <div style="flex: 1; overflow: hidden; padding: 4px 20px 0; display: flex; flex-direction: column; gap: 8px">
+    <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: #4A5B54">Aujourd'hui</span>
+
+    <a href="ParentSeance.dc.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 14px; padding: 12px 14px; display: flex; gap: 12px; align-items: flex-start">
+      <span style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 18px; background: #0B5D45; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M7 4v16l13-8z"></path></svg></span>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Cours démarré · Kevin</span><span style="font-size: 13px; color: #4A5B54">Mathématiques avec M. Etoga</span></div>
+      <span style="font-size: 12px; color: #4A5B54">16:02</span>
+    </a>
+    <a href="ParentSeance.dc.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 14px; padding: 12px 14px; display: flex; gap: 12px; align-items: flex-start">
+      <span style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 18px; background: #E3EFEA; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B5D45" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Appel enregistré · Kevin présent</span><span style="font-size: 13px; color: #4A5B54">Statut déclaré par l'enseignant</span></div>
+      <span style="font-size: 12px; color: #4A5B54">15:58</span>
+    </a>
+    <a href="ParentProfils.dc.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 14px; padding: 12px 14px; display: flex; gap: 12px; align-items: flex-start">
+      <span style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 18px; background: #E3EFEA; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B5D45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg></span>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">2 nouveaux profils disponibles</span><span style="font-size: 13px; color: #4A5B54">Physique-Chimie · Kevin</span></div>
+      <span style="font-size: 12px; color: #4A5B54">11:20</span>
+    </a>
+    <a href="ParentPaiements.dc.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 14px; padding: 12px 14px; display: flex; gap: 12px; align-items: flex-start">
+      <span style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 18px; background: #FCEFD9; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B4210" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Échéance dans 3 jours</span><span style="font-size: 13px; color: #4A5B54">25 000 FCFA au jour 15</span></div>
+      <span style="font-size: 12px; color: #4A5B54">08:00</span>
+    </a>
+
+    <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: #4A5B54; padding-top: 6px">Hier</span>
+    <a href="ParentReclamations.dc.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 14px; padding: 12px 14px; display: flex; gap: 12px; align-items: flex-start">
+      <span style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 18px; background: #EEF2EF; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2E3E37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></span>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Réclamation R-0131 résolue</span><span style="font-size: 13px; color: #4A5B54">Réponse de l'administration</span></div>
+      <span style="font-size: 12px; color: #4A5B54">17:45</span>
+    </a>
+    <a href="ParentSeance.dc.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 14px; padding: 12px 14px; display: flex; gap: 12px; align-items: flex-start">
+      <span style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 18px; background: #EEF2EF; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="#2E3E37"><rect x="5" y="5" width="14" height="14" rx="2"></rect></svg></span>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Cours terminé · compte rendu</span><span style="font-size: 13px; color: #4A5B54">Mathématiques · Kevin</span></div>
+      <span style="font-size: 12px; color: #4A5B54">18:04</span>
+    </a>
+  </div>
+  <div style="height: 20px"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

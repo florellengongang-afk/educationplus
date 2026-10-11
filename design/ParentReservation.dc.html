@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Parent — Détail d'une réservation</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B5D45}a:hover{color:#07402F}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F5F2; color: #0F1F19; font-family: 'Figtree', sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <div style="padding: 20px 20px 14px; display: flex; align-items: center; gap: 12px">
+    <a href="ParentFicheEnfant.dc.html" aria-label="Retour" style="width: 44px; height: 44px; border-radius: 22px; border: 1px solid #DDE3DF; background: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #0F1F19">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+    </a>
+    <div style="flex: 1; display: flex; flex-direction: column">
+      <span style="font-size: 13px; color: #4A5B54">Kevin · réservation active</span>
+      <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700">Mathématiques</h1>
+    </div>
+  </div>
+
+  <div style="flex: 1; overflow: hidden; padding: 0 20px; display: flex; flex-direction: column; gap: 12px">
+    <section style="background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 18px; padding: 14px 16px; display: flex; align-items: center; gap: 12px">
+      <span style="width: 48px; height: 48px; border-radius: 24px; background: #DCE9E3; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #0B5D45">PE</span>
+      <div style="flex: 1; display: flex; flex-direction: column"><span style="font-size: 16px; font-weight: 700">Paul Etoga</span><span style="font-size: 13px; color: #4A5B54">Indépendant · licence de physique (déclarée)</span></div>
+    </section>
+
+    <section style="background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 18px; padding: 6px 16px; display: flex; flex-direction: column; font-size: 14px">
+      <div style="display: flex; justify-content: space-between; gap: 10px; padding: 10px 0; border-bottom: 1px solid #EEF2EF"><span style="color: #4A5B54">Séances</span><span style="font-weight: 700">Mer. 16h–18h · Sam. 9h–11h</span></div>
+      <div style="display: flex; justify-content: space-between; gap: 10px; padding: 10px 0; border-bottom: 1px solid #EEF2EF"><span style="color: #4A5B54">Lieu</span><span style="font-weight: 700">Domicile · Bastos</span></div>
+      <div style="display: flex; justify-content: space-between; gap: 10px; padding: 10px 0; border-bottom: 1px solid #EEF2EF"><span style="color: #4A5B54">Cycle en cours</span><span style="font-weight: 700">Jour 12 / 30 · 5 / 8 séances</span></div>
+      <div style="display: flex; justify-content: space-between; gap: 10px; padding: 10px 0"><span style="color: #4A5B54">Paiement</span><span style="font-weight: 700">50 / 50 · prochaine éch. J15</span></div>
+    </section>
+
+    <nav style="background: #FFFFFF; border: 1px solid #DDE3DF; border-radius: 18px; padding: 0 16px; display: flex; flex-direction: column">
+      <a href="ParentReport.dc.html" style="min-height: 54px; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #0F1F19; font-size: 15px; font-weight: 600; border-bottom: 1px solid #EEF2EF">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B5D45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="M3 9h18M8 2v4M16 2v4M10 15h4"></path></svg><span style="flex: 1">Reporter une séance</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A5B54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg></a>
+      <a href="ParentAvis.dc.html" style="min-height: 54px; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #0F1F19; font-size: 15px; font-weight: 600; border-bottom: 1px solid #EEF2EF">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B5D45" stroke-width="2" stroke-linejoin="round"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"></path></svg><span style="flex: 1">Laisser un avis</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A5B54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg></a>
+      <a href="ParentNouvelleReclamation.dc.html" style="min-height: 54px; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #0F1F19; font-size: 15px; font-weight: 600; border-bottom: 1px solid #EEF2EF">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B5D45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg><span style="flex: 1">Signaler un problème</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A5B54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg></a>
+      <a href="ParentAnnulation.dc.html" style="min-height: 54px; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #A3322A; font-size: 15px; font-weight: 600">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A3322A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M15 9l-6 6M9 9l6 6"></path></svg><span style="flex: 1">Annuler ou changer d'enseignant</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A3322A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg></a>
+    </nav>
+  </div>
+  <div style="height: 20px"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>
