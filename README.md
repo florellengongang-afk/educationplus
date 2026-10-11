@@ -22,7 +22,7 @@ pnpm install
 docker compose up -d          # ou : pnpm db:up (PostgreSQL local, port 5433)
 cp .env.example .env
 pnpm db:migrate
-pnpm db:seed                  # 7 comptes de démo, mot de passe : demo1234
+pnpm db:seed:demo             # facultatif : comptes fictifs pour développer (mot de passe demo1234)
 pnpm dev:web                  # http://localhost:3000  → /admin, /partenaire, /api/health
 pnpm dev:mobile               # puis scanner le QR code avec Expo Go
 ```

@@ -17,7 +17,7 @@ Plateforme camerounaise de **répétiteurs à domicile** (SIL → Terminale). Pa
 ```bash
 pnpm install
 pnpm db:up            # PostgreSQL local sur le port 5433 (ou: docker compose up -d)
-pnpm db:migrate && pnpm db:seed   # comptes de démo, mot de passe demo1234
+pnpm db:migrate && pnpm db:seed:demo   # données fictives, développement uniquement
 pnpm dev:web          # http://localhost:3000 (admin : /admin, partenaire : /partenaire)
 pnpm dev:mobile       # Expo
 pnpm test && pnpm typecheck && pnpm lint

@@ -1,7 +1,9 @@
 /** Écran Bienvenue — maquette design/ParentBienvenue.dc.html. */
+import { Redirect } from "expo-router";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { colors, fonts } from "@educationplus/ui-tokens";
+import { useStore } from "@/data/store";
 import { Button } from "@/ui/kit";
 
 const PROMISES = [
@@ -11,6 +13,9 @@ const PROMISES = [
 ];
 
 export default function Welcome() {
+  const { account } = useStore();
+  if (account) return <Redirect href="/accueil" />;
+
   return (
     <SafeAreaView style={styles.root}>
       <ScrollView contentContainerStyle={styles.scroll}>
@@ -32,7 +37,6 @@ export default function Welcome() {
       </ScrollView>
       <View style={styles.actions}>
         <Button label="Créer un compte" variant="light" href="/connexion" />
-        <Button label="Voir une demande de cours (démo)" variant="ghost" href="/demande" />
       </View>
     </SafeAreaView>
   );

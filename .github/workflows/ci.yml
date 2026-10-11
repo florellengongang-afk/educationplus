@@ -36,5 +36,5 @@ jobs:
       - run: pnpm typecheck
       - run: pnpm lint
       - run: pnpm db:migrate
-      - run: pnpm db:seed
+      - run: pnpm db:seed:demo
       - run: pnpm --filter web build
