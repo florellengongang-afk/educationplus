@@ -12,6 +12,9 @@ on:
       - "packages/ui-tokens/**"
       - ".github/workflows/android-apk.yml"
 
+permissions:
+  contents: write
+
 jobs:
   apk:
     runs-on: ubuntu-24.04
@@ -46,3 +49,13 @@ jobs:
           name: educationplus-apk
           path: apps/mobile/android/app/build/outputs/apk/release/app-release.apk
           retention-days: 30
+      - name: Publier l'APK (lien de téléchargement direct)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp apps/mobile/android/app/build/outputs/apk/release/app-release.apk educationplus.apk
+          TAG="apk-${{ github.run_number }}"
+          gh release create "$TAG" educationplus.apk \
+            --title "EducationPlus APK de test n°${{ github.run_number }}" \
+            --notes "APK de test signée avec une clé de debug. Installer sur Android en autorisant les sources inconnues." \
+            --latest
